@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            width: 400px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 26px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border-color: #007bff;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .signup-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Log In</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <small class="error-message" id="emailError"></small>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <small class="error-message" id="passwordError"></small>
+            </div>
+            <button type="submit" class="login-btn">Log In</button>
+            <div class="signup-link">
+                Don't have an account? <a href="sign.html">Sign Up</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Input fields
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+
+            // Error message elements
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+
+            // Reset all error messages
+            resetErrors([emailError, passwordError]);
+
+            // Validation checks
+            const validations = [
+                { isValid: validateRequired(email.value), errorElement: emailError, message: 'Email is required.' },
+                { isValid: validateRequired(password.value), errorElement: passwordError, message: 'Password is required.' }
+            ];
+
+            let isValid = true;
+            validations.forEach(validation => {
+                if (!validation.isValid) {
+                    displayError(validation.errorElement, validation.message);
+                    isValid = false;
+                }
+            });
+
+            if (isValid) {
+                // Retrieve users from local storage
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+
+                // Check if the user exists
+                const user = users.find(user => user.email === email.value.trim() && user.password === password.value.trim());
+
+                if (user) {
+                    alert(`Welcome, ${user.username}!`);
+                    // Redirect or perform another action upon successful login
+                    window.location.href = 'index.html'; // Example redirect
+                } else {
+                    alert('Invalid email or password.');
+                }
+            }
+        });
+
+        // Utility Functions
+        function resetErrors(errorElements) {
+            errorElements.forEach(element => element.textContent = '');
+        }
+
+        function displayError(element, message) {
+            element.textContent = message;
+        }
+
+        function validateRequired(value) {
+            return value.trim() !== '';
+        }
+    </script>
+</body>
+</html>

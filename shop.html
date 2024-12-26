@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store - Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">XYZSTORE</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="offer.html" class="active">Offer Zone</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            
+        </ul>
+    </nav>
+    <main>
+        <section class="featured-products">
+            <h2>Mens Collection</h2>
+            <p>Top Brands at low prices.</p>
+            
+            <div class="products-container">
+                <div class="product-card">
+                    <a href="cart.html" target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/x/b/n/l-563577-bewakoof-original-imah6wnzepjp9dcm.jpeg?q=70" alt="Cartoon Astronaut T-Shirts"></a>
+                    <h3>BEING HUMAN </h3>
+                    <p>Men Slim Fit Checkered Casual T-Shirt</p>
+                    <span>RS 767</span>
+                    <a href="cart.html"> <button onclick="addToCart('BEING HUMAN Men Slim Fit Checkered Casual T-Shirt', 767)">Add to Cart</button></a>
+                </div>
+                <div class="product-card">
+                    <a href="cart.html" target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/h/n/h/l-no-hljk000876-highlander-original-imagugz8wzpmggcm.jpeg?q=70" alt="Modern Jacket"></a>
+                    <h3>Doller</h3>
+                    <p>Men printed pure Solid Casual black Jacket</p>
+                    <span>RS 699</span>
+                    <a href="cart.html"> <button onclick="addToCart('Doller Men printed pure Solid Casual black Jacket', 699)">Add to Cart</button></a>
+                </div>
+                <div class="product-card">
+                    <a href="cart.html" target="_blank">
+                    <img src="https://imgs.search.brave.com/zPS8ky1RjZrnP-9GkjepBIqEriPinWyWH2j3zFAGrr0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFOcmZCdU4rM0wu/anBn" alt="Stylish Sneakers"></a>
+                    <h3>URgear</h3>
+                    <p>Men Printed Round Neck Pure Cotton Black T-Shirt</p>
+                    <span>RS 599</span>
+                    <a href="cart.html"><button onclick="addToCart('URgear Men Printed Round Neck Pure Cotton Black T-Shirt', 599)">Add to Cart</button></a>
+                </div>
+                <div class="product-card">
+                    <a href="cart.html" target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/track-suit/n/p/h/xl-2038-elite-elegance-apparel-original-imah5zfbucmc2qzz.jpeg?q=70" alt="Stylish Sneakers"></a>
+                    <h3>Elite Elegance Apparel</h3>
+                    <p>Solid Men Track Suit</p>
+                    <span>RS 679</span>
+                    <a href="cart.html"> <button onclick="addToCart('Elite Elegance Apparel Solid Men Track Suit', 679)">Add to Cart</button></a>
+                </div>
+                <div class="product-card">
+                    <a href="cart.html" target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/trouser/m/x/5/32-black-pant-5-amazing-star-fashion-original-imagnjj2e8ezfnvt.jpeg?q=70" alt="Stylish Sneakers"></a>
+                    <h3>KAJARU</h3>
+                    <p>Men Regular Fit Black Cotton Blend Trousers</p>
+                    <span>RS 899</span>
+                    <a href="cart.html"> <button onclick="addToCart('KAJARU Men Regular Fit Black Cotton Blend Trousers', 899)">Add to Cart</button></a>
+                </div>
+                <div class="product-card">
+                    <a href="cart.html" target="_blank">
+                    <img src="https://media.gq-magazine.co.uk/photos/6683db4de8d8f8cc35401084/3:4/w_320,c_limit/Jeans_Arket.jpg" alt="Stylish Sneakers"></a>
+                    <h3>arket Jeans</h3>
+                    <p>Men Solid white Track Pants</p>
+                    <span>RS 589</span>
+                    <a href="cart.html"><button onclick="addToCart('arket Jeans Men Solid white Track Pants', 589)">Add to Cart</button></a>
+                </div>
+                <div class="product-card">
+                    <a href="cart.html" target="_blank">
+                    <img src="https://th.bing.com/th/id/OIP.HbZKac1iUjpMxuiOxpkDRwHaLH?w=204&h=306&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Stylish Sneakers"></a>
+                    <h3>Wildcraft</h3>
+                    <p>Men Solid black Track Pants</p>
+                    <span>RS 987</span>
+                    <a href="cart.html"> <button onclick="addToCart('Wildcraft Men Solid black Track Pants', 987)">Add to Cart</button></a>
+                </div>
+                <div class="product-card">
+                    <a href="cart.html" target="_blank">
+                    <img src="https://th.bing.com/th/id/OIP.vcBaWDgg_My_RmC1j-d8YwHaOO?w=180&h=346&c=7&r=0&o=5&dpr=1.3&pid=1.7" height="306px" alt="Stylish Sneakers"></a>
+                    <h3>Wildcraft</h3>
+                    <p>Men next generation Stylish Track Pants</p>
+                    <span>RS 1099</span>
+                    <a href="cart.html"> <button onclick="addToCart('Wildcraft Men next generation Stylish Track Pants', 1099)">Add to Cart</button></a>
+                </div>
+            </div>
+        </section>
+    
+        <section class="featured-products">
+            <h2>Ladies Collection</h2>
+            <p>Top Brands at low prices.</p>
+            <div class="products-container">
+              
+                <div class="product-card">
+                    <a href="cart1.html" target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/t/q/6/xxl-206kbd2183-samah-original-imahfu5k8dgmbw6v.jpeg?q=70" alt="Cartoon Astronaut T-Shirts"></a>
+                    <h3>BKApparels </h3>
+                    <p>Women Cotton Blend Kurta Pant Dupatta Set</p>
+                    <span>RS 899</span>
+                    <a href="cart1.html"><button onclick="addToCart('BKApparels Women Cotton Blend Kurta Pant Dupatta Set', 899)">Add to Cart</button></a>
+                </div>
+                <div class="product-card">
+                    <a href="delivery.html" target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/x/b/c/xl-hek589-dressar-original-imah6fhhga4vq4rt.jpeg?q=70" alt="Modern Jacket"></a>
+                    <h3>DRESS</h3>
+                    <p>Women Self Design Viscose Rayon Straight Kurta  (Black)</p>
+                    <span>RS 799</span>
+                    <a href="cart.html"><button onclick="addToCart('DRESS Women Self Design Viscose Rayon Straight Kurta  (Black)',799)">Add to Cart</button></a>
+                </div>
+                <div class="product-card">
+                    <a href="delivery.html" target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/sari/p/u/y/free-chiffon-saree-party-wear-sarees-sadi-women-sarees-new2024-original-imah5q2uabzmpyna.jpeg?q=70" alt="Stylish Sneakers"></a>
+                    <h3>SAREE</h3>
+                    <p>Floral Print Daily Wear Chiffon, Georgette Saree  (Black, Yellow)</p>
+                    <span>RS 735</span>
+                    <a href="cart.html"><button onclick="addToCart">Add to Cart</button></a>
+                </div>
+                <div class="product-card">
+                    <a href="delivery.html" target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/sari/d/b/q/free-daily-use-saree-siffon-saree-2024-saree-women-saree-new2024-original-imah5zymwsvepgsh.jpeg?q=70" alt="Stylish Sneakers"></a>
+                    <h3>MIRCHI STYLE </h3>
+                    <p>Printed, Floral Print Daily Wear Chiffon, Georgette Saree  (Dark Green, Light Blue)</p>
+                    <span>RS 239</span>
+                    <a href="cart.html"><button onclick="addToCart">Add to Cart</button></a>
+                </div>
+                <div class="product-card">
+                    <a href="delivery.html" target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/sweatshirt/p/q/a/l-w-print-414-maroon-lecowar-original-imah5mvsmdmwyxtj.jpeg?q=70" alt="Stylish Sneakers"></a>
+                    <h3>Lecowear</h3>
+                    <p>Women Full Sleeve Graphic Print Sweatshirt</p>
+                    <span>RS 768</span>
+                    <a href="cart.html"><button onclick="addToCart">Add to Cart</button></a>
+                </div>
+                <div class="product-card">
+                    <a href="delivery.html" target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/d/u/k/xs-1-no-dwj893-xs-deewa-original-imaggn3ydspggzmw.jpeg?q=70" alt="Stylish Sneakers"></a>
+                    <h3>Deewa</h3>
+                    <p>Women Solid Parka Jacket</p>
+                    <span>RS 1909</span>
+                    <a href="cart.html"><button onclick="addToCart">Add to Cart</button></a>
+                </div>
+                <div class="product-card">
+                    <a href="delivery.html" target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/sweater/p/i/i/xl-sweater-black-15-kasma-original-imah5wpjn2ytvmy5.jpeg?q=70" alt="Stylish Sneakers"></a>
+                    <h3>kasma </h3>
+                    <p>Women Printed Round Neck Black Sweater</p>
+                    <span>RS 1599</span>
+                    <a href="cart.html"><button onclick="addToCart">Add to Cart</button></a>
+                </div>
+                <div class="product-card">
+                    <a href="delivery.html" target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-jewellery-set/s/v/a/x6-lt-sm14-sm35-od-kc-mangalsutra-earring-set-yembon-original-imagzbzcjupunfae.jpeg?q=70" alt="jewellery"></a>
+                    <h3>jewellery</h3>
+                    <p>women fashion jewellery</p>
+                    <span>RS 2099</span>
+                    <a href="cart.html"><button onclick="addToCart">Add to Cart</button></a>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2047 XYSTORE. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        // Dynamic cart handling
+        document.addEventListener('DOMContentLoaded', () => {
+            const productsContainer = document.querySelector('#mens-collection');
+            const cart = [];
+
+            // Event delegation for "Add to Cart" buttons
+            productsContainer.addEventListener('click', (event) => {
+                if (event.target.classList.contains('add-to-cart')) {
+                    const productCard = event.target.closest('.product-card');
+                    const productName = productCard.dataset.name;
+                    const productPrice = productCard.dataset.price;
+
+                    // Add product to cart array
+                    cart.push({ name: productName, price: productPrice });
+                    alert(`${productName} has been added to your cart for RS ${productPrice}`);
+
+                    // Save the cart to local storage for later use
+                    localStorage.setItem('cart', JSON.stringify(cart));
+
+                    // Optionally redirect to cart page
+                     window.location.href = 'cart.html';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">XYZSTORE</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="pp.html"class="active">Privacy Policy</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+  
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need support, feel free to contact us!</p>
+
+        <!-- Contact Form -->
+        <form id="contact-form" action="javascript:void(0);" method="POST" onsubmit="submitForm()">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="7" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <div id="response-message" class="response-message"></div>
+
+        <!-- Company Address -->
+        <div class="address-section">
+            <h3>Our Address</h3>
+            <p>XYZSTORE</p>
+            <p>143 Fashion Avenue</p>
+            <p>8th Floor, New Excelsior Building,
+                A. K. Nayak Marg, Fort</p>
+            <p>Mumbai- 400 001,INDIA</p>
+
+            <!-- Address Image Map -->
+            <div class="map-container">
+                <h4>Find us on the Map</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3439.9324282731795!2d-84.3038144!3d30.4380174!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1734851391536!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </map>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2047 XYSTORE. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+
+        </ul>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

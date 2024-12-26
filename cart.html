@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store - Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">XYZSTORE</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="cart-section">
+            <h2>Your Shopping Cart</h2>
+
+            <!-- Cart Item 1 -->
+            <div class="cart-item" id="cart-item1">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/x/b/n/l-563577-bewakoof-original-imah6wnzepjp9dcm.jpeg?q=70" alt="Cartoon Astronaut T-Shirts">
+                <div class="item-details">
+                    <h3>BEING HUMAN Men Slim Fit Checkered Casual T-Shirt</h3>
+                    <p>Size: M</p>
+                    <p>Color: Black</p>
+                    <div class="quantity">
+                        <button class="decrease" onclick="updateQuantity('item1', -1)">-</button>
+                        <input type="number" id="item1" value="1" min="1" readonly>
+                        <button class="increase" onclick="updateQuantity('item1', 1)">+</button>
+                    </div>
+                    <button class="remove-btn" onclick="removeProduct('item1')">Remove</button>
+                </div>
+                <div class="item-price">
+                    <span id="price-item1">RS 767</span>
+                </div>
+            </div>
+
+            <!-- Cart Item 2 -->
+            <div class="cart-item" id="cart-item2">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/h/n/h/l-no-hljk000876-highlander-original-imagugz8wzpmggcm.jpeg?q=70" alt="Modern Jacket">
+                <div class="item-details">
+                    <h3>Doller Men printed pure Solid Casual Black Jacket</h3>
+                    <p>Size: L</p>
+                    <p>Color: Black</p>
+                    <div class="quantity">
+                        <button class="decrease" onclick="updateQuantity('item2', -1)">-</button>
+                        <input type="number" id="item2" value="1" min="1" readonly>
+                        <button class="increase" onclick="updateQuantity('item2', 1)">+</button>
+                    </div>
+                    <button class="remove-btn" onclick="removeProduct('item2')">Remove</button>
+                </div>
+                <div class="item-price">
+                    <span id="price-item2">RS 699</span>
+                </div>
+            </div>
+
+            <!-- Cart Item 3 -->
+            <div class="cart-item" id="cart-item3">
+                <img src="https://imgs.search.brave.com/zPS8ky1RjZrnP-9GkjepBIqEriPinWyWH2j3zFAGrr0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFOcmZCdU4rM0wu/anBn" alt="Stylish Sneakers">
+                <div class="item-details">
+                    <h3>URgear Men Printed Round Neck Pure Cotton Black T-Shirt</h3>
+                    <p>Size: XL</p>
+                    <p>Color: Black</p>
+                    <div class="quantity">
+                        <button class="decrease" onclick="updateQuantity('item3', -1)">-</button>
+                        <input type="number" id="item3" value="1" min="1" readonly>
+                        <button class="increase" onclick="updateQuantity('item3', 1)">+</button>
+                    </div>
+                    <button class="remove-btn" onclick="removeProduct('item3')">Remove</button>
+                </div>
+                <div class="item-price">
+                    <span id="price-item3">RS 599</span>
+                </div>
+            </div>
+
+            <!-- Cart Item 4 -->
+            <div class="cart-item" id="cart-item4">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/track-suit/n/p/h/xl-2038-elite-elegance-apparel-original-imah5zfbucmc2qzz.jpeg?q=70" alt="Stylish Sneakers">
+                <div class="item-details">
+                    <h3>Elite Elegance Apparel Solid Men Track Suit</h3>
+                    <p>Size: M</p>
+                    <p>Color: Black</p>
+                    <div class="quantity">
+                        <button class="decrease" onclick="updateQuantity('item4', -1)">-</button>
+                        <input type="number" id="item4" value="1" min="1" readonly>
+                        <button class="increase" onclick="updateQuantity('item4', 1)">+</button>
+                    </div>
+                    <button class="remove-btn" onclick="removeProduct('item4')">Remove</button>
+                </div>
+                <div class="item-price">
+                    <span id="price-item4">RS 679</span>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <h3>Cart Summary</h3>
+                <p>Total Items: <span id="total-items">4</span></p>
+                <p>Total Price: <span id="total-price">₹2744</span></p>
+                <a href="delivery.html"><button class="checkout-btn">Proceed to checkout</button></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2047 XYZSTORE. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Cart -->
+    <script>
+        // Initial cart data
+        const cart = {
+            items: [
+                { id: 'item1', name: 'BEING HUMAN Men Slim Fit Checkered Casual T-Shirt', price: 767, quantity: 1 },
+                { id: 'item2', name: 'Doller Men printed pure Solid Casual Black Jacket', price: 699, quantity: 1 },
+                { id: 'item3', name: 'URgear Men Printed Round Neck Pure Cotton Black T-Shirt', price: 599, quantity: 1 },
+                { id: 'item4', name: 'Elite Elegance Apparel Solid Men Track Suit', price: 679, quantity: 1 }
+            ]
+        };
+
+        // Update item quantity
+        function updateQuantity(itemId, change) {
+            const item = cart.items.find(item => item.id === itemId);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity < 1) {
+                    item.quantity = 1;
+                }
+                updateCartUI(itemId, item.quantity);
+            }
+        }
+
+        // Remove product from cart
+        function removeProduct(itemId) {
+            const itemIndex = cart.items.findIndex(item => item.id === itemId);
+            if (itemIndex !== -1) {
+                cart.items.splice(itemIndex, 1);
+                const itemElement = document.getElementById('cart-' + itemId);
+                if (itemElement) {
+                    itemElement.remove();
+                }
+                updateCartSummary();
+            }
+        }
+
+        // Update the cart UI with new values
+        function updateCartUI(itemId, quantity) {
+            const item = cart.items.find(item => item.id === itemId);
+            if (item) {
+                document.getElementById(itemId).value = quantity;
+                const priceElement = document.getElementById('price-' + itemId);
+                priceElement.textContent = 'RS ' + (item.price * quantity);
+                updateCartSummary();
+            }
+        }
+
+        // Update cart summary (total items and total price)
+        function updateCartSummary() {
+            let totalItems = 0;
+            let totalPrice = 0;
+            cart.items.forEach(item => {
+                totalItems += item.quantity;
+                totalPrice += item.price * item.quantity;
+            });
+            document.getElementById('total-items').textContent = totalItems;
+            document.getElementById('total-price').textContent = '₹' + totalPrice;
+        }
+
+        window.onload = function() {
+            cart.items.forEach(item => {
+                updateCartUI(item.id, item.quantity);
+            });
+        };
+    </script>
+
+</body>
+</html>
